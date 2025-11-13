@@ -3,7 +3,7 @@
   "nameLong": "Countdown DataSuite",
   "applicationName": "cd2030-datasuite",
   "dataFolderName": ".cd2030-datasuite",
-  "win32MutexName": "cd2030datasuite",
+  "win32MutexName": "datasuite",
   "licenseName": "MIT",
   "licenseUrl": "https://github.com/aphrcwaro/datasuite/blob/main/LICENSE.txt",
   "win32DirName": "Countdown DataSuite",

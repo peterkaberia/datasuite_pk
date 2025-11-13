@@ -139,16 +139,19 @@ dataCompletenessServer <- function(id, cache, i18n) {
 
       output$incomplete_region <- renderCustomPlot({
 
-        req(completeness_summary())
+        req(completeness_summary(), indicator())
+        
+        print(indicator())
 
         all_indicators <- get_all_indicators()
-        completeness_summary() %>%
+        completeness_summary() %>% 
           mutate(across(starts_with('mis_'), ~ 100 - .x)) %>%
           group_by(!!sym(admin_level())) %>%
-          select(year, any_of(admin_level()), where(~ any(.x < 100, na.rm = TRUE))) %>%
+          select(year, any_of(admin_level()), where(~ any(.x < 100, na.rm = TRUE))) %>% 
           pivot_longer(cols = starts_with('mis_'),
                        names_prefix = 'mis_',
                        names_to = 'indicator') %>%
+          filter(indicator == indicator()) %>% print() %>% 
           mutate(facet_label = paste0(!!sym(admin_level()), ': ', indicator)) %>%
           ggplot(aes(y = value, x = year, colour = indicator)) +
           geom_line() +

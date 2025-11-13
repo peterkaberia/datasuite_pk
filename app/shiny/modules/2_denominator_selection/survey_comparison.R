@@ -4,11 +4,11 @@ surveyComparisonUI <- function(id, i18n) {
   tabBox(
     title = i18n$t('title_national_coverage'),
     width = 12,
-    
+
     tabPanel(title = i18n$t("opt_ideliv"), downloadCoverageUI(ns('ideliv'))),
     tabPanel(title = i18n$t("opt_bcg"), downloadCoverageUI(ns('bcg'))),
     tabPanel(title = i18n$t("opt_penta3"), downloadCoverageUI(ns('penta3'))),
-    tabPanel(title = i18n$t("opt_mcv1"), downloadCoverageUI(ns('measles1')))
+    tabPanel(title = i18n$t("opt_measles1"), downloadCoverageUI(ns('measles1')))
   )
 }
 

@@ -11,8 +11,8 @@ nationalInequalityUI <- function(id, i18n) {
 
     countdownOptions(
       title = i18n$t('title_options'),
-      column(3, adminLevelInputUI(ns('admin_level'), i18n)),
       column(3, denominatorInputUI(ns('denominator'), i18n)),
+      column(3, adminLevelInputUI(ns('admin_level'), i18n)),
       column(3, selectizeInput(ns('years'), label = i18n$t("title_select_years"), choice = NULL, multiple = TRUE)),
       column(3, selectizeInput(ns('palette'), label = i18n$t("title_palette"), choices = c('Greens', 'Blues', 'Reds')))
     ),

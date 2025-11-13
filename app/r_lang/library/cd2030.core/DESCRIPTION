@@ -34,18 +34,10 @@ RoxygenNote: 7.3.2
 Depends: R (>= 4.1)
 BugReports: https://github.com/aphrcwaro/cd2030.core/issues
 Config/testthat/edition: 3
-RemoteType: github
-RemoteHost: api.github.com
-RemoteRepo: cd2030.core
-RemoteUsername: damurka
-RemoteRef: HEAD
-RemoteSha: dd5458a066856f10700fc1b14475fac457bd702e
-GithubRepo: cd2030.core
-GithubUsername: damurka
-GithubRef: HEAD
-GithubSHA1: dd5458a066856f10700fc1b14475fac457bd702e
+RemoteType: local
+RemoteUrl: D:\Dev\R\aphrc\cd2030.core
 NeedsCompilation: no
-Packaged: 2025-10-28 14:41:30 UTC; Murage
+Packaged: 2025-11-13 10:54:35 UTC; Murage
 Author: David Kariuki [aut, cre] (ORCID:
     <https://orcid.org/0009-0003-6159-1107>),
   Martin Mutua [aut],
@@ -54,4 +46,4 @@ Author: David Kariuki [aut, cre] (ORCID:
   Rornald Muhumuza [aut],
   African Population and Health Research Center (APHRC) [cph, fnd]
 Maintainer: David Kariuki <hello@damurka.com>
-Built: R 4.5.0; ; 2025-10-28 14:41:42 UTC; windows
+Built: R 4.5.0; ; 2025-11-13 10:55:08 UTC; windows

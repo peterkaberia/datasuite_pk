@@ -36,7 +36,7 @@ const rcedit = promisify(require('rcedit'));
 
 const cd2030Resources = [
 	// Electron Preload
-	'out-build/preload.js'
+	'out-build/cd/base/parts/sandbox/electron-browser/preload.js',
 ];
 
 const bootstrapEntryPoints = ['out-build/main.js'];
@@ -118,9 +118,8 @@ function packageTask(platform, arch, sourceFolderName, destinationFolderName, op
 		console.log(out)
 
 		const checksums = computeChecksums(out, [
-			'preload.js'
+			'cd/base/parts/sandbox/electron-browser/preload.js',
 			/*
-			'vs/base/parts/sandbox/electron-browser/preload.js',
 			'vs/workbench/workbench.desktop.main.js',
 			'vs/workbench/workbench.desktop.main.css',
 			'vs/code/electron-browser/workbench/workbench.html',

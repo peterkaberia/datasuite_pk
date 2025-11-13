@@ -24,14 +24,14 @@ export function showCrashPage(window: BrowserWindow, error: string) {
 
 // IPC Channel definitions
 export const IPC_CHANNELS = {
-  RETRY_START_SHINY: 'cd2030:retry-start-shiny',
-  SET_ERROR_MESSAGE: 'cd2030:set-error-message', // Already used for showing general errors
-  SET_LOADING_MESSAGE: 'cd2030:set-loading-message',
+  RETRY_START_SHINY: 'cdsuite:retry-start-shiny',
+  SET_ERROR_MESSAGE: 'cdsuite:set-error-message', // Already used for showing general errors
+  SET_LOADING_MESSAGE: 'cdsuite:set-loading-message',
   // Add a specific channel for R process crashes if you want distinct handling
   // or reuse SET_ERROR_MESSAGE as you are currently doing for general errors.
   // For distinct handling:
-  R_PROCESS_CRASHED: 'cd2030:r-process-crashed',
-  PICK_FILE: 'cd2030:pick-file',
+  R_PROCESS_CRASHED: 'cdsuite:r-process-crashed',
+  PICK_FILE: 'cdsuite:pick-file',
 };
 
 // Renderer script functionality

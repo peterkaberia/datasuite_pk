@@ -1,0 +1,54 @@
+default_indicators <- c('penta1', 'penta3', 'measles1', 'dropout_penta13', 'dropout_penta3mcv1')
+
+tabPanelsUI <- function(ns, i18n, title_key, uiInput, 
+                        indicators = NULL, 
+                        customIndicators = get_analysis_indicators(),
+                        showCustom = TRUE) {
+  
+  indicators <- indicators %||% default_indicators
+  
+  tabs <- map(indicators, ~ {
+    tabPanel(
+      title = i18n$t(paste0('opt_', .x)),
+      uiInput(ns(.x))
+    )
+  })
+  
+  custom_tab <- if (isTRUE(showCustom)) {
+    tabPanel(
+      title = i18n$t('opt_custom_check'),
+      fluidRow(
+        column(3, indicatorSelect(ns('indicator'), i18n, indicators = customIndicators)),
+        column(12, uiInput(ns('custom')))
+      )
+    )
+  } else NULL
+  
+  tabBox(
+    title = i18n$t(title_key),
+    width = 12,
+    !!!tabs,
+    custom_tab
+  )
+}
+
+tabPanelsServer <- function(ns,
+                            serverInput,
+                            indicators = NULL) {
+  stopifnot(is.function(serverInput))
+  
+  indicators <- indicators %||% default_indicators
+  
+  walk(indicators, ~ {
+    local({ 
+      id <- .x
+      serverInput(ns, id, .x) 
+    })
+  })
+  
+  selected <- indicatorSelectServer('indicator')
+  observeEvent(selected(), {
+    req(selected())
+    serverInput(ns, 'custom', selected())
+  }, ignoreInit = TRUE)
+}

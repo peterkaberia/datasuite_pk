@@ -1,6 +1,6 @@
 source('modules/setup/file_upload_helpers.R')
 source('modules/setup/modal_helpers.R')
-source('ui/directory-input.R')
+source('ui/input/directory-input.R')
 
 fileUploadUI <- function(id, i18n) {
   ns <- NS(id)

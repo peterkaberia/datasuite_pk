@@ -44,6 +44,8 @@ surveySetupServer <- function(id, cache, i18n) {
         }
         updateNumericInput(session, 'measles1_prop', value = unname(estimates['measles1']))
         updateNumericInput(session, 'bcg_prop', value = unname(estimates['bcg']))
+        updateNumericInput(session, 'opv1_prop', value = unname(estimates['opv1']))
+        updateNumericInput(session, 'opv3_prop', value = unname(estimates['opv3']))
       })
 
       observeEvent(c(input$penta3_prop, input$measles1_prop, input$bcg_prop), {

@@ -29,7 +29,7 @@ equityUI <- function(id, i18n) {
       ),
 
       tabPanel(
-        title = i18n$t("opt_mcv1"),
+        title = i18n$t("opt_measles1"),
         fluidRow(
           column(12, plotCustomOutput(ns('measles1'))),
           column(3, downloadButtonUI(ns('measles1_download')))

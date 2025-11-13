@@ -8,8 +8,8 @@ nationalTargetUI <- function(id, i18n) {
 
     countdownOptions(
       title = i18n$t('title_options'),
-      column(3, adminLevelInputUI(ns('admin_level'), i18n)),
-      column(3, denominatorInputUI(ns('denominator'), i18n))
+      column(3, denominatorInputUI(ns('denominator'), i18n)),
+      column(3, adminLevelInputUI(ns('admin_level'), i18n))
     ),
 
     tabBox(

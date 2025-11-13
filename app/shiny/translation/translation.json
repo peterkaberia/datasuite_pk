@@ -32,9 +32,9 @@
     },
     {
       "key": "title_quality",
-      "en": "Quality Checks",
-      "fr": "Contrôles de qualité",
-      "pt": "Verificações de qualidade"
+      "en": "Data Quality Assessment",
+      "fr": "Évaluation de la Qualité des Données",
+      "pt": "Avaliação da Qualidade dos Dados"
     },
     {
       "key": "title_reporting",
@@ -56,9 +56,9 @@
     },
     {
       "key": "title_completeness",
-      "en": "Data Completeness",
-      "fr": "Complétude des données",
-      "pt": "Completude dos dados"
+      "en": "Data Missingness",
+      "fr": "Données Manquantes",
+      "pt": "Dados Ausentes"
     },
     {
       "key": "title_calculate_ratios",
@@ -1194,12 +1194,7 @@
   "fr": "Naissances vivantes",
   "pt": "Nascimentos Vivos"
 },
-{
-  "key": "opt_penta1",
-  "en": "Penta 1",
-  "fr": "Penta 1",
-  "pt": "Penta 1"
-},
+
 {
   "key": "opt_bcg",
   "en": "BCG",
@@ -1435,22 +1430,34 @@
   "pt": "Menores de 1 ano"
 },
 {
+  "key": "opt_penta1",
+  "en": "Penta 1",
+  "fr": "Penta 1",
+  "pt": "Penta 1"
+},
+{
   "key": "opt_penta3",
   "en": "Penta 3",
   "fr": "Penta 3",
   "pt": "Penta 3"
 },
 {
-  "key": "opt_mcv1",
+  "key": "opt_measles1",
   "en": "Measles 1",
   "fr": "Rougeole 1",
   "pt": "Sarampo 1"
 },
 {
-  "key": "opt_mcv2",
-  "en": "Measles 2",
-  "fr": "Rougeole 2",
-  "pt": "Sarampo 2"
+  "key": "opt_dropout_penta13",
+  "en": "Penta 1 to Penta 3 Dropout",
+  "fr": "Abandon entre Penta 1 et Penta 3",
+  "pt": "Evasão de Penta 1 para Penta 3"
+},
+{
+  "key": "opt_dropout_penta3mcv1",
+  "en": "Penta 3 to Measles 1 Dropout",
+  "fr": "Abandon entre Penta 3 et Rougeole 1",
+  "pt": "Evasão de Penta 3 para Sarampo 1"
 },
 {
   "key": "title_denominator",
@@ -1477,12 +1484,6 @@
   "pt": "Tendência da Cobertura Nacional"
 },
 {
-  "key": "title_penta3_mcv1_dropout",
-  "en": "Penta 3 to Measles 1 Dropout",
-  "fr": "Abandon entre Penta 3 et Rougeole 1",
-  "pt": "Evasão de Penta 3 para Sarampo 1"
-},
-{
   "key": "title_mcv1_coverage",
   "en": "Measles 1 Coverage",
   "fr": "Couverture Rougeole 1",
@@ -1493,12 +1494,6 @@
   "en": "Penta 3 Coverage",
   "fr": "Couverture Penta 3",
   "pt": "Cobertura Penta 3"
-},
-{
-  "key": "title_penta13_dropout",
-  "en": "Penta 1 to Penta 3 Dropout",
-  "fr": "Abandon entre Penta 1 et Penta 3",
-  "pt": "Evasão de Penta 1 para Penta 3"
 },
 {
   "key": "title_coverage",
